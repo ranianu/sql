@@ -1,0 +1,15 @@
+SELECT o.PropertyID, p.Name , v.value
+FROM ownerProperty o
+JOIN Property p
+ON o.Id = p.Id
+JOIN PropertyHomeValue v
+  ON v.PropertyId = o.PropertyId
+WHERE OwnerId = 1426;
+
+
+
+SELECT v.value, t.HomeValueType
+FROM PropertyHomeValue v
+JOIN PropertyHomeValueType t
+ON v.HomeValueTypeId = t.Id
+Where HomeValueTypeId = 1;
